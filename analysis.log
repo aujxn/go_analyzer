@@ -1056,3 +1056,245 @@
 2020-05-25 20:55:56-0700: NN batches: 3
 2020-05-25 20:55:56-0700: NN avg batch size: 4
 2020-05-25 20:55:56-0700: All cleaned up, quitting
+2020-05-25 22:11:45-0700: Analysis Engine starting...
+2020-05-25 22:11:45-0700: KataGo v1.4.2
+2020-05-25 22:11:45-0700: nnRandSeed0 = 13144536069270154296
+2020-05-25 22:11:45-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-25 22:11:46-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-25 22:11:46-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-25 22:11:46-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-25 22:11:46-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-25 22:11:46-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-25 22:11:46-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-25 22:11:46-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-25 22:11:46-0700: Loaded config ./analysis.config
+2020-05-25 22:11:46-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-25 22:11:46-0700: OpenCL backend: Model version 8
+2020-05-25 22:11:46-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-25 22:11:46-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-25 22:11:46-0700: Started, ready to begin handling requests
+2020-05-25 22:12:01-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-25 22:12:01-0700: NN rows: 2595
+2020-05-25 22:12:01-0700: NN batches: 368
+2020-05-25 22:12:01-0700: NN avg batch size: 7.05163
+2020-05-25 22:12:01-0700: All cleaned up, quitting
+2020-05-26 07:45:54-0700: Analysis Engine starting...
+2020-05-26 07:45:54-0700: KataGo v1.4.2
+2020-05-26 07:45:54-0700: nnRandSeed0 = 9159822311057263576
+2020-05-26 07:45:54-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 07:45:55-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 07:45:55-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 07:45:55-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 07:45:55-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 07:45:55-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 07:45:55-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 07:45:55-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 07:45:55-0700: Loaded config ./analysis.config
+2020-05-26 07:45:55-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 07:45:55-0700: OpenCL backend: Model version 8
+2020-05-26 07:45:55-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 07:45:55-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 07:45:55-0700: Started, ready to begin handling requests
+2020-05-26 07:46:10-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 07:46:10-0700: NN rows: 2587
+2020-05-26 07:46:10-0700: NN batches: 368
+2020-05-26 07:46:10-0700: NN avg batch size: 7.02989
+2020-05-26 07:46:10-0700: All cleaned up, quitting
+2020-05-26 09:54:33-0700: Analysis Engine starting...
+2020-05-26 09:54:33-0700: KataGo v1.4.2
+2020-05-26 09:54:33-0700: nnRandSeed0 = 11082582456790101371
+2020-05-26 09:54:33-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 09:54:34-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 09:54:34-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 09:54:34-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 09:54:34-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 09:54:34-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 09:54:34-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 09:54:34-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 09:54:34-0700: Loaded config ./analysis.config
+2020-05-26 09:54:34-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 09:54:34-0700: OpenCL backend: Model version 8
+2020-05-26 09:54:34-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 09:54:34-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 09:54:34-0700: Started, ready to begin handling requests
+2020-05-26 09:54:34-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 09:54:34-0700: NN rows: 0
+2020-05-26 09:54:34-0700: NN batches: 0
+2020-05-26 09:54:34-0700: NN avg batch size: -nan
+2020-05-26 09:54:35-0700: All cleaned up, quitting
+2020-05-26 09:59:34-0700: Analysis Engine starting...
+2020-05-26 09:59:34-0700: KataGo v1.4.2
+2020-05-26 09:59:34-0700: nnRandSeed0 = 14425208146146192627
+2020-05-26 09:59:34-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 09:59:35-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 09:59:35-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 09:59:35-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 09:59:35-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 09:59:35-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 09:59:35-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 09:59:35-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 09:59:35-0700: Loaded config ./analysis.config
+2020-05-26 09:59:35-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 09:59:35-0700: OpenCL backend: Model version 8
+2020-05-26 09:59:35-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 09:59:35-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 09:59:35-0700: Started, ready to begin handling requests
+2020-05-26 09:59:35-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 09:59:35-0700: NN rows: 0
+2020-05-26 09:59:35-0700: NN batches: 0
+2020-05-26 09:59:35-0700: NN avg batch size: -nan
+2020-05-26 09:59:36-0700: All cleaned up, quitting
+2020-05-26 10:01:08-0700: Analysis Engine starting...
+2020-05-26 10:01:08-0700: KataGo v1.4.2
+2020-05-26 10:01:08-0700: nnRandSeed0 = 12727351283270769940
+2020-05-26 10:01:08-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:01:09-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:01:09-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:01:09-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:01:09-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:01:09-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:01:09-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:01:09-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:01:09-0700: Loaded config ./analysis.config
+2020-05-26 10:01:09-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:01:09-0700: OpenCL backend: Model version 8
+2020-05-26 10:01:09-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:01:09-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:01:09-0700: Started, ready to begin handling requests
+2020-05-26 10:01:25-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:01:25-0700: NN rows: 2541
+2020-05-26 10:01:25-0700: NN batches: 365
+2020-05-26 10:01:25-0700: NN avg batch size: 6.96164
+2020-05-26 10:01:25-0700: All cleaned up, quitting
+2020-05-26 10:03:10-0700: Analysis Engine starting...
+2020-05-26 10:03:10-0700: KataGo v1.4.2
+2020-05-26 10:03:10-0700: nnRandSeed0 = 7433271608211246072
+2020-05-26 10:03:10-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:03:11-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:03:11-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:03:11-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:03:11-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:03:11-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:03:11-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:03:11-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:03:11-0700: Loaded config ./analysis.config
+2020-05-26 10:03:11-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:03:11-0700: OpenCL backend: Model version 8
+2020-05-26 10:03:11-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:03:11-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:03:11-0700: Started, ready to begin handling requests
+2020-05-26 10:03:27-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:03:27-0700: NN rows: 2564
+2020-05-26 10:03:27-0700: NN batches: 367
+2020-05-26 10:03:27-0700: NN avg batch size: 6.98638
+2020-05-26 10:03:27-0700: All cleaned up, quitting
+2020-05-26 10:09:26-0700: Analysis Engine starting...
+2020-05-26 10:09:26-0700: KataGo v1.4.2
+2020-05-26 10:09:26-0700: nnRandSeed0 = 262647886970889828
+2020-05-26 10:09:26-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:09:27-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:09:27-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:09:27-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:09:27-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:09:27-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:09:27-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:09:27-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:09:27-0700: Loaded config ./analysis.config
+2020-05-26 10:09:27-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:09:27-0700: OpenCL backend: Model version 8
+2020-05-26 10:09:27-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:09:27-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:09:27-0700: Started, ready to begin handling requests
+2020-05-26 10:09:42-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:09:42-0700: NN rows: 2537
+2020-05-26 10:09:42-0700: NN batches: 363
+2020-05-26 10:09:42-0700: NN avg batch size: 6.98898
+2020-05-26 10:09:42-0700: All cleaned up, quitting
+2020-05-26 10:10:37-0700: Analysis Engine starting...
+2020-05-26 10:10:37-0700: KataGo v1.4.2
+2020-05-26 10:10:37-0700: nnRandSeed0 = 18119982352014441999
+2020-05-26 10:10:37-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:10:38-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:10:38-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:10:38-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:10:38-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:10:38-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:10:38-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:10:38-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:10:38-0700: Loaded config ./analysis.config
+2020-05-26 10:10:38-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:10:38-0700: OpenCL backend: Model version 8
+2020-05-26 10:10:38-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:10:38-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:10:38-0700: Started, ready to begin handling requests
+2020-05-26 10:10:53-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:10:53-0700: NN rows: 2567
+2020-05-26 10:10:53-0700: NN batches: 362
+2020-05-26 10:10:53-0700: NN avg batch size: 7.09116
+2020-05-26 10:10:53-0700: All cleaned up, quitting
+2020-05-26 10:12:28-0700: Analysis Engine starting...
+2020-05-26 10:12:28-0700: KataGo v1.4.2
+2020-05-26 10:12:28-0700: nnRandSeed0 = 14672603784656575178
+2020-05-26 10:12:28-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:12:29-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:12:29-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:12:29-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:12:29-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:12:29-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:12:29-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:12:29-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:12:29-0700: Loaded config ./analysis.config
+2020-05-26 10:12:29-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:12:29-0700: OpenCL backend: Model version 8
+2020-05-26 10:12:29-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:12:29-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:12:29-0700: Started, ready to begin handling requests
+2020-05-26 10:12:44-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:12:44-0700: NN rows: 2556
+2020-05-26 10:12:44-0700: NN batches: 366
+2020-05-26 10:12:44-0700: NN avg batch size: 6.98361
+2020-05-26 10:12:44-0700: All cleaned up, quitting
+2020-05-26 10:16:36-0700: Analysis Engine starting...
+2020-05-26 10:16:36-0700: KataGo v1.4.2
+2020-05-26 10:16:36-0700: nnRandSeed0 = 9494648441946223492
+2020-05-26 10:16:36-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 10:16:37-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 10:16:37-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 10:16:37-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 10:16:37-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 10:16:37-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 10:16:37-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 10:16:37-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 10:16:37-0700: Loaded config ./analysis.config
+2020-05-26 10:16:37-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:16:37-0700: OpenCL backend: Model version 8
+2020-05-26 10:16:37-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 10:16:37-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 10:16:37-0700: Started, ready to begin handling requests
+2020-05-26 10:17:35-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 10:17:35-0700: NN rows: 10217
+2020-05-26 10:17:35-0700: NN batches: 1192
+2020-05-26 10:17:35-0700: NN avg batch size: 8.57131
+2020-05-26 10:17:35-0700: All cleaned up, quitting
+2020-05-26 11:02:31-0700: Analysis Engine starting...
+2020-05-26 11:02:31-0700: KataGo v1.4.2
+2020-05-26 11:02:31-0700: nnRandSeed0 = 9438378539931057425
+2020-05-26 11:02:31-0700: After dedups: nnModelFile0 = /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz useFP16 auto useNHWC auto
+2020-05-26 11:02:32-0700: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 1.2 CUDA 10.2.159)
+2020-05-26 11:02:32-0700: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2020-05-26 11:02:32-0700: Found OpenCL Platform 1: Clover (Mesa) (OpenCL 1.1 Mesa 20.0.6)
+2020-05-26 11:02:32-0700: Found 0 device(s) on platform 1 with type CPU or GPU or Accelerator, skipping
+2020-05-26 11:02:32-0700: Found OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) (score 11000102)
+2020-05-26 11:02:32-0700: Using OpenCL Device 0: GeForce GTX 1050 Ti (NVIDIA Corporation) OpenCL 1.2 CUDA
+2020-05-26 11:02:32-0700: Loaded tuning parameters from: /home/austen/.katago/opencltuning/tune6_gpuGeForceGTX1050Ti_x19_y19_c256_mv8.txt
+2020-05-26 11:02:32-0700: Loaded config ./analysis.config
+2020-05-26 11:02:32-0700: Loaded model /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 11:02:32-0700: OpenCL backend: Model version 8
+2020-05-26 11:02:32-0700: OpenCL backend: Model name: g170-b20c256x2-s3761649408-d809581368
+2020-05-26 11:02:32-0700: Analyzing up to 6 positions at at time in parallel
+2020-05-26 11:02:32-0700: Started, ready to begin handling requests
+2020-05-26 11:03:28-0700: /home/austen/Programs/katago-opencl/g170e-b20c256x2-s3761649408-d809581368.bin.gz
+2020-05-26 11:03:28-0700: NN rows: 10207
+2020-05-26 11:03:28-0700: NN batches: 1185
+2020-05-26 11:03:28-0700: NN avg batch size: 8.6135
+2020-05-26 11:03:28-0700: All cleaned up, quitting

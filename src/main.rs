@@ -1,34 +1,66 @@
 use itertools::Itertools;
 use serde_json::Value;
-use sgf_parser::{parse, SgfToken};
+use sgf_parser::{parse, Action, Color, GameNode, GameTree, SgfToken};
 use std::fs::File;
 use std::io::BufReader;
 use std::io::Write;
 use std::process::{Command, Stdio};
 
-enum Action {
-    Play(usize, usize),
-    Pass,
+#[test]
+fn act_to_str_test() {
+    assert_eq!("A19", action_to_string(&Action::Move(1, 1)));
+    assert_eq!("PASS", action_to_string(&Action::Pass));
+    assert_eq!("D4", action_to_string(&Action::Move(4, 16)));
+    assert_eq!("T19", action_to_string(&Action::Move(19, 1)));
+    assert_eq!("T1", action_to_string(&Action::Move(19, 19)));
 }
 
-impl Action {
-    fn gen_string(&self) -> String {
-        let letters = "ABCDEFGHJKLMNOPQRST";
-        let letters: Vec<char> = letters.chars().collect();
-        match self {
-            Action::Play(x, y) => {
-                let x = letters[x - 1];
-                let y = 20 - y;
-                format!("\"{}{}\"", x, y)
-            }
-            Action::Pass => String::from("\"PASS\""),
+fn action_to_string(a_move: &Action) -> String {
+    let letters = "ABCDEFGHJKLMNOPQRST";
+    let letters: Vec<char> = letters.chars().collect();
+    match a_move {
+        Action::Move(x, y) => {
+            let x = letters[*x as usize - 1];
+            let y = 20 - y;
+            format!("{}{}", x, y)
         }
+        Action::Pass => String::from("PASS"),
+    }
+}
+
+#[test]
+fn str_to_act_test() {
+    assert_eq!(string_to_action("A19"), Action::Move(1, 1));
+    assert_eq!(string_to_action("PASS"), Action::Pass);
+    assert_eq!(string_to_action("D4"), Action::Move(4, 16));
+    assert_eq!(string_to_action("T19"), Action::Move(19, 1));
+    assert_eq!(string_to_action("T1"), Action::Move(19, 19));
+}
+
+fn string_to_action(move_string: &str) -> Action {
+    let letters = "ABCDEFGHJKLMNOPQRST";
+    let char_to_num = |target| {
+        (letters
+            .chars()
+            .enumerate()
+            .find(|(_i, x)| target == *x)
+            .unwrap()
+            .0
+            + 1) as u8
+    };
+
+    if move_string == "PASS" {
+        Action::Pass
+    } else {
+        let x = char_to_num(move_string.chars().next().unwrap());
+        let y = 20 - move_string[1..].parse::<u8>().unwrap();
+        Action::Move(x, y)
     }
 }
 
 struct Game {
     pub id: String,
-    pub moves: Vec<Action>,
+    pub moves: Vec<(Color, Action)>,
     //pub rules: String,
     //pub komi: String,
     //pub x_dim: String,
@@ -52,24 +84,56 @@ struct Response {
     pub turn_number: usize,
 }
 
+fn swap_color(color: &Color) -> Color {
+    match color {
+        Color::Black => Color::White,
+        Color::White => Color::Black,
+    }
+}
+
+impl Response {
+    fn get_variations(&self, color: Color) -> Vec<GameTree> {
+        let variation_count = 3;
+        let mut variations = vec![];
+
+        for alternative in self.move_infos.iter().take(variation_count) {
+            let mut current_color = color;
+            let mut variation = GameTree {
+                nodes: vec![],
+                variations: vec![],
+            };
+
+            for action_string in alternative.primary_variation.iter() {
+                variation.nodes.push(GameNode {
+                    tokens: vec![SgfToken::Move {
+                        color: current_color,
+                        action: string_to_action(action_string),
+                    }],
+                });
+                current_color = swap_color(&current_color);
+            }
+            variations.push(variation);
+        }
+        variations
+    }
+}
+
 impl Game {
     fn to_query(&self) -> String {
         let moves = self
             .moves
             .iter()
-            .enumerate()
-            .map(|(move_num, action)| {
+            .map(|(color, action)| {
                 let turn;
-                if move_num % 2 == 0 {
-                    turn = "\"B\"";
-                } else {
-                    turn = "\"W\"";
+                match color {
+                    Color::Black => turn = "\"B\"",
+                    Color::White => turn = "\"W\"",
                 }
-                format!("[{},{}]", turn, action.gen_string())
+                format!("[{},\"{}\"]", turn, action_to_string(action))
             })
             .join(",");
 
-        format!("{{\"id\":\"{}\",\"moves\":[{}],\"rules\":\"japanese\",\"komi\":6.5,\"boardXSize\":19,\"boardYSize\":19,\"analyzeTurns\":[{}]}}\n", self.id, moves ,(0..self.moves.len()).map(|x| format!("{}",x)).join(","))
+        format!("{{\"id\":\"{}\",\"moves\":[{}],\"rules\":\"japanese\",\"komi\":6.5,\"boardXSize\":19,\"boardYSize\":19,\"analyzeTurns\":[{}]}}\n", self.id, moves ,(1..self.moves.len()).map(|x| format!("{}",x)).join(","))
     }
 }
 
@@ -127,24 +191,19 @@ fn main() {
         .unwrap();
     let tree = parse(&game).unwrap();
 
-    let moves: Vec<Action> = tree
+    let moves: Vec<(Color, Action)> = tree
         .iter()
         .filter_map(|node| {
             node.tokens
                 .iter()
                 .map(|token| match token {
                     SgfToken::Move {
-                        color: _,
+                        color: a_color,
                         action: a_move,
-                    } => match a_move {
-                        sgf_parser::Action::Move(x, y) => {
-                            Some(Action::Play(*x as usize, *y as usize))
-                        }
-                        sgf_parser::Action::Pass => Some(Action::Pass),
-                    },
+                    } => Some((*a_color, *a_move)),
                     _ => None,
                 })
-                .find(|a_move| a_move.is_some())
+                .find(|an_action| an_action.is_some())
                 .unwrap_or(None)
         })
         .collect();
@@ -186,22 +245,83 @@ fn main() {
     let mut file = File::create("result.json").unwrap();
     file.write_all(json_string.as_bytes()).unwrap();
 
-    let responses = json();
-    for response in responses {
+    let mut responses = json();
+
+    responses.sort_unstable_by(|a, b| a.turn_number.cmp(&b.turn_number));
+
+    let mut new_tree = sgf_parser::GameTree {
+        nodes: vec![],
+        variations: vec![],
+    };
+
+    let change_in_winrate_threshold = 0.1;
+    let add_variations: Vec<usize> = responses
+        .iter()
+        .zip(responses.iter().skip(1))
+        .enumerate()
+        .filter_map(|(i, (x, y))| {
+            if (x.winrate - y.winrate).abs() > change_in_winrate_threshold {
+                Some(i)
+            } else {
+                None
+            }
+        })
+        .collect();
+
+    let mut add_variations = add_variations.into_iter();
+    let mut next_bad_move = add_variations.next();
+
+    let mut current_tree = &mut new_tree;
+
+    for ((i, (color, action)), response) in a_game.moves.iter().enumerate().zip(responses.iter()) {
+        let winrate_token = SgfToken::Unknown((
+            String::from("SBKV"),
+            format!("{:2}", response.winrate * 100.0),
+        ));
+        let sgf_tokens = vec![
+            SgfToken::Move {
+                color: *color,
+                action: *action,
+            },
+            winrate_token,
+        ];
+
+        current_tree.nodes.push(GameNode { tokens: sgf_tokens });
+
+        if next_bad_move.is_some() && next_bad_move.unwrap() == i {
+            current_tree.variations.push(GameTree {
+                nodes: vec![],
+                variations: vec![],
+            });
+            let next_color = swap_color(color);
+            let mut variations = response.get_variations(next_color);
+            current_tree.variations.append(&mut variations);
+            current_tree = current_tree.variations.get_mut(0).unwrap();
+            next_bad_move = add_variations.next();
+        }
+    }
+
+    let mut new_sgf = File::create("new.sgf").unwrap();
+    let sgf_string: String = new_tree.into();
+    new_sgf.write_all(sgf_string.as_bytes()).unwrap();
+
+    /*
+    for response in responses.iter() {
         println!(
             "move {}: \t winrate: {} \t visits: {}",
             response.turn_number, response.winrate, response.root_visits
         );
 
-        for variation in response.move_infos {
+        for variation in response.move_infos.iter() {
             println!(
                 "rank: {} \t visits: {} \t winrate: {}",
                 variation.rank, variation.visits, variation.winrate
             );
-            for location in variation.primary_variation {
+            for location in variation.primary_variation.iter() {
                 print!("{} ", location);
             }
             println!();
         }
     }
+    */
 }
