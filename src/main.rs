@@ -98,6 +98,10 @@ impl Response {
 
         for alternative in self.move_infos.iter().take(variation_count) {
             let mut current_color = color;
+            let info = SgfToken::Comment(format!(
+                "Black winrate: {} Visits: {}",
+                alternative.winrate, alternative.visits
+            ));
             let mut variation = GameTree {
                 nodes: vec![],
                 variations: vec![],
@@ -105,10 +109,13 @@ impl Response {
 
             for action_string in alternative.primary_variation.iter() {
                 variation.nodes.push(GameNode {
-                    tokens: vec![SgfToken::Move {
-                        color: current_color,
-                        action: string_to_action(action_string),
-                    }],
+                    tokens: vec![
+                        SgfToken::Move {
+                            color: current_color,
+                            action: string_to_action(action_string),
+                        },
+                        info.clone(),
+                    ],
                 });
                 current_color = swap_color(&current_color);
             }
@@ -226,7 +233,7 @@ fn main() {
             "-config",
             "./analysis.config",
             "-analysis-threads",
-            "6",
+            "9",
         ])
         .spawn()
         .unwrap();
