@@ -1,1 +1,4 @@
 /target
+*.sgf
+*.log
+*.json
